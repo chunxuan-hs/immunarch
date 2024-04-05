@@ -337,7 +337,7 @@ dXX <- function(.data, .perc = 10) {
     n <- n + 1
     prop <- prop + col[n]
   }
-  res <- c(Clones = n, Percentage = 100 * signif((prop / col.sum), 3), Clonal.count.prop = n / nrow(.data))
+  res <- c(Clones = n, Percentage = 100 * signif((prop / col.sum), 3), Clonal.count.prop = n / length(.data))
   add_class(res, "immunr_dxx")
 }
 
